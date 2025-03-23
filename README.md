@@ -1,7 +1,7 @@
 # Digital-Clock
 This repository contains HTML and CSS code for a digital clock.
 
-Live Demo: hemrishi-digital-clock.vercel.app
+Live Demo: [hemrishi-digital-clock](https://hemrishi-digital-clock.vercel.app/)
 
 
 SS:
