@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Digital Clock</title>
+    <link rel="icon" href="/Digital Clock/ad2246232da9642a17128c40932fa10c.jpg" type="image/x-icon"> <!-- Link to the favicon -->
+</head>
+
+<body>
+    <h1>Digital Clock</h1>
+    <div class="container">
+        <!-- Date and Day -->
+        <!-- <div class="box1">
+            <div class="date"></div>
+            <div class="day"></div>
+        </div> -->
+
+        <!-- Time -->
+        <div class="box">
+            <h1 class="hours"></h1>
+            <h1>:</h1>
+            <h1 class="minutes"></h1>
+            <div class="sec">
+                <p class="seconds">_</p>
+                <div class="underline"></div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        function showTime() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var date = d.toLocaleDateString();
+            var day = d.toLocaleDateString('en-US', { weekday: 'long' });
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+            document.querySelector(".hours").innerText = h;
+            document.querySelector(".minutes").innerText = m;
+            document.querySelector(".seconds").innerText = s;
+            document.querySelector(".date").innerText = date;
+            document.querySelector(".day").innerText = day;
+
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+    </script>
+    <footer>
+        <p>Copyright © 2025 Hemrishi. All rights reserved</p>
+    </footer>
+</body>
+
+</html>
